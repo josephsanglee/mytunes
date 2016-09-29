@@ -18,6 +18,8 @@ var LibraryView = Backbone.View.extend({
         return new LibraryEntryView({model: song}).render();
       })
     );
+
+    return this.$el.append('<th>Song QueNe<th>');
   }
 
 });
