@@ -19,7 +19,7 @@ var LibraryView = Backbone.View.extend({
       })
     );
 
-    return this.$el.append('<th>Song QueNe<th>');
+    // this.$el.append('<th>Song QueNe<th>');
   }
 
 });
