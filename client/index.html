@@ -20,11 +20,53 @@
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/SongQueueView.js"></script>
     <script src="views/AppView.js"></script>
+    <script src="env/config.js"></script>
+
+    <!-- <script>
+
+    $.ajax({
+      url: "https://api.parse.com/1/classes/songs/",
+      type: "GET",
+      success: function(data) {
+        console.log("data received: ", data);
+      },
+      error: function(e) {
+        console.error(e);
+      }
+    });
+
+    </script> -->
 
     <script>
+      // var newSongData = [];
+
+      // $.ajax({
+      //   url: "https://api.parse.com/1/classes/songs/",
+      //   type: "GET",
+      //   success: function(data) {
+      //     data.results.forEach(function(song) {
+      //       newSongData.push(song);
+      //     });
+
+      //     var library = new Songs(newSongData);
+      //     var app = new AppModel({library: library});
+
+      //     // build a view for the top level of the whole app
+      //     var appView = new AppView({model: app});
+
+      //     // put the view onto the screen
+      //     $('body').append(appView.render());
+
+
+      //   },
+      //   error: function(e) {
+      //     console.error(e);
+      //   }
+      // });
+
       $(function() {
         // set up model objects
-        var library = new Songs(songData);
+        var library = new Songs();
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
